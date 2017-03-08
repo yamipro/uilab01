@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>マイプロジェクト　i!i!i!i!i!</title>
+
+    <script src="https://www.gstatic.com/firebasejs/3.7.0/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyAEWCoppXQ-R_zFznNHEfala2WkMTpSQTs",
+        authDomain: "iiiii-7997d.firebaseapp.com",
+        databaseURL: "https://iiiii-7997d.firebaseio.com",
+        storageBucket: "iiiii-7997d.appspot.com",
+        messagingSenderId: "264504808157"
+    };
+    firebase.initializeApp(config);
+
+    let shopRef = firebase.database().ref();
+    shopRef.on('value', function(res) {
+        // listen to the event every time the value changed
+        // includes the childs
+        console.log( res.val() );
+    });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="js/send.js"></script>
+    <link rel="stylesheet" href="css/def.css">
+
+</head>
+<body>
+    <div align="center">
+        <caption><h1>Retail owner</h1></caption>
+        <em>
+        <table style="width:600px">
+            <tr>
+                <td>Shop Name</td>
+                <td><input type="text" id="name"></td>
+            </tr>
+            <tr>
+                <td>Discount Detail</td>
+                <td><input type="text" id="deta"></td>
+            </tr>
+            <tr>
+                <td>Total Voucher</td>
+                <td><input type="number" id="tvou"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <th>
+                    <input type="submit" id="post">
+                </th>
+        </table>
+        </em>
+    </div>
+    
+</body>
+</html>
