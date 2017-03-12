@@ -4,24 +4,23 @@ $(function() {
 
   let messagesRef = firebase.database().ref();
 
-  // When the user presses enter on the message input, write the message to firebase.
-  $("#post").click(function () {
+  $("#post").click(function () {    //Load value from html id to var
     var name = $("#name").val();
     var deta = $("#deta").val();
     var tvou = $("#tvou").val();
-    if (name == ''||deta == ''||tvou == ''){
+    if (name == ''||deta == ''||tvou == ''){  //check input field
       alert("Insufficient data");
     }
     else {
-      pushData(name, deta, tvou);
+      pushData(name, deta, tvou);   
       alert("Promotion is added/updated");
-      $("#name").val("");
+      $("#name").val("");   //clear input field
       $("#deta").val("");
       $("#tvou").val("");
     }
   });
 });
-function pushData(name, detail, total){
+function pushData(name, detail, total){ //push data to firebase
   firebase.database().ref('shop/' + name).update({
     discountDetail:detail,
     totalVoucher:total
