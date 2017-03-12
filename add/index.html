@@ -2,9 +2,12 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>マイプロジェクト　i!i!i!i!i!</title>
+    <title>Add Promotion</title>
 
     <script src="https://www.gstatic.com/firebasejs/3.7.0/firebase.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.blue_grey-orange.min.css">
+    <script src="https://code.getmdl.io/1.1.3/material.min.js"></script>
     <script>
     // Initialize Firebase
     var config = {
@@ -25,33 +28,59 @@
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="js/send.js"></script>
-    <link rel="stylesheet" href="css/def.css">
+    <!--link rel="stylesheet" href="css/def.css"-->
 
 </head>
 <body>
-    <div align="center">
-        <caption><h1>Retail owner</h1></caption>
-        <em>
+    <div>
+    <header class="header mdl-color-text--white mdl-color--light-blue-700 is-casting-shadow">
+    <div class="mdl-layout__header-row titlebar">
+    <h3>Add/Update Promotion</h3>
+      <a  fb-doc-href="../" target="_blank" href="../index.html"> <button class="mdl-button--raised mdl-button mdl-js-button mdl-js-ripple-effect" data-upgraded=",MaterialButton,MaterialRipple"> Promo Page <span class="mdl-button__ripple-container"><span class="mdl-ripple is-animating" style="width: 256.821px; height: 256.821px; transform: translate(-50%, -50%) translate(74px, 1px);"></span></span></button> </a>
+    </div>
+    </header>
+    <br/>
+        <!--em>
         <table style="width:600px">
             <tr>
                 <td>Shop Name</td>
-                <td><input type="text" id="name"></td>
+                <td><input class="mdl-textfield__input" type="text" id="name"></td>
             </tr>
             <tr>
                 <td>Discount Detail</td>
-                <td><input type="text" id="deta"></td>
+                <td><input class="mdl-textfield__input" type="text" id="deta"></td>
             </tr>
             <tr>
                 <td>Total Voucher</td>
-                <td><input type="number" id="tvou"></td>
+                <td><input class="mdl-textfield__input" type="text" id="tvou"></td>
             </tr>
             <tr>
-                <td></td>
-                <th>
+            <td></td>
+                <td>
                     <input type="submit" id="post">
-                </th>
+                </td>
+            </tr>
         </table>
-        </em>
+        </em-->
+        <div class="mdl-card__supporting-text mdl-color-text--grey-600">
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-upgraded is-dirty" data-upgraded=",MaterialTextfield">
+                  <input class="mdl-textfield__input" type="text" id="name">
+                  <label class="mdl-textfield__label" for="new-post-title">Shop Name</label>
+        </div>
+        <br/>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-upgraded is-dirty" data-upgraded=",MaterialTextfield">
+                  <input class="mdl-textfield__input" type="text" id="deta">
+                  <label class="mdl-textfield__label" for="new-post-title">Promotion Detail</label>
+        </div>
+        <br/>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-upgraded is-dirty" data-upgraded=",MaterialTextfield">
+                  <input class="mdl-textfield__input" type="text" id="tvou">
+                  <label class="mdl-textfield__label" for="new-post-title">Number of Voucher</label>
+        </div>
+        <br/>
+        <button type="submit" id="post" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" data-upgraded=",MaterialButton,MaterialRipple">
+        Update</button>
+        </div>
     </div>
     
 </body>

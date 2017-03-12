@@ -9,9 +9,21 @@ $(function() {
     var name = $("#name").val();
     var deta = $("#deta").val();
     var tvou = $("#tvou").val();
-    messagesRef.push({name:name, deta:deta, tvou:tvou});
-    $("#name").val("");
-    $("#deta").val("");
-    $("#tvou").val("");
+    if (name == ''||deta == ''||tvou == ''){
+      alert("Insufficient data");
+    }
+    else {
+      pushData(name, deta, tvou);
+      alert("Promotion is added/updated");
+      $("#name").val("");
+      $("#deta").val("");
+      $("#tvou").val("");
+    }
   });
 });
+function pushData(name, detail, total){
+  firebase.database().ref('shop/' + name).update({
+    discountDetail:detail,
+    totalVoucher:total
+  });
+}
