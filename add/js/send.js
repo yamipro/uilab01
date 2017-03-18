@@ -22,6 +22,7 @@ $(function() {
 });
 function pushData(name, detail, total){ //push data to firebase
   firebase.database().ref('shop/' + name).update({
+    name: name,
     discountDetail:detail,
     totalVoucher:total
   });
