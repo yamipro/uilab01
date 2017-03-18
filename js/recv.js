@@ -6,7 +6,7 @@ $(function() {
     clean();
     data.forEach(function(childData){
       var key = childData.key;
-      var child_name = childName.val().name;
+      var child_name = childData.val().name;
       var child_detail = childData.val().discountDetail;
       var child_total = childData.val().totalVoucher;
       var child_link = childData.val().link;
