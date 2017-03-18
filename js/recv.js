@@ -6,10 +6,11 @@ $(function() {
     clean();
     data.forEach(function(childData){
       var key = childData.key;
+      var child_name = childName.val().name;
       var child_detail = childData.val().discountDetail;
       var child_total = childData.val().totalVoucher;
       var child_link = childData.val().link;
-      createBox(key, child_detail, child_total, child_link);
+      createBox(child_name, child_detail, child_total, child_link);
     })
   });
 });
